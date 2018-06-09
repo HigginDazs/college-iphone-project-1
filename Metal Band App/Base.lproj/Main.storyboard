@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kFr-Mo-FNK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--All Bands Table-->
+        <scene sceneID="Kox-n6-gzq">
+            <objects>
+                <tableViewController id="iQK-Qk-BEp" customClass="AllBandsTable" customModule="Metal_Band_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="KwM-vk-soP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="60" id="2Ko-9X-gRx" customClass="AllBandsCell" customModule="Metal_Band_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Ko-9X-gRx" id="xIc-xQ-lhD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJ8-Ew-qcY">
+                                            <rect key="frame" x="295" y="0.0" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="MaM-DZ-4Jr"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45G-Yi-SHf">
+                                            <rect key="frame" x="14" y="14" width="273" height="33"/>
+                                            <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="19"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="45G-Yi-SHf" firstAttribute="centerY" secondItem="kJ8-Ew-qcY" secondAttribute="centerY" id="3hD-yL-Jq2"/>
+                                        <constraint firstItem="45G-Yi-SHf" firstAttribute="top" secondItem="xIc-xQ-lhD" secondAttribute="topMargin" constant="6" id="Zih-Be-kOK"/>
+                                        <constraint firstItem="kJ8-Ew-qcY" firstAttribute="centerY" secondItem="xIc-xQ-lhD" secondAttribute="centerY" id="byr-SD-fat"/>
+                                        <constraint firstItem="45G-Yi-SHf" firstAttribute="leading" secondItem="xIc-xQ-lhD" secondAttribute="leadingMargin" constant="6" id="h5S-Hv-HCk"/>
+                                        <constraint firstItem="kJ8-Ew-qcY" firstAttribute="top" secondItem="xIc-xQ-lhD" secondAttribute="top" id="i9J-ck-Wce"/>
+                                        <constraint firstItem="kJ8-Ew-qcY" firstAttribute="leading" secondItem="45G-Yi-SHf" secondAttribute="trailing" constant="8" symbolic="YES" id="iLz-OB-fTc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kJ8-Ew-qcY" secondAttribute="trailing" constant="12" id="jw7-ja-7d7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="bandCellImage" destination="kJ8-Ew-qcY" id="JW3-8y-V5K"/>
+                                    <outlet property="bandCellName" destination="45G-Yi-SHf" id="UxE-3u-r6d"/>
+                                    <segue destination="Sox-6f-OgQ" kind="show" identifier="secSegue" id="SRt-MO-y6R"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iQK-Qk-BEp" id="KCb-XD-eWL"/>
+                            <outlet property="delegate" destination="iQK-Qk-BEp" id="DPU-ns-jcd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1yZ-Tz-Mp7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMX-PZ-uFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783.20000000000005" y="-83.208395802098963"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mSN-bC-EVK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kFr-Mo-FNK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QgT-Hs-7GT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iQK-Qk-BEp" kind="relationship" relationship="rootViewController" id="veF-HG-Fkr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arq-GL-dAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1575" y="-83"/>
+        </scene>
+        <!--Band View-->
+        <scene sceneID="MpX-5g-bzr">
+            <objects>
+                <viewController id="Sox-6f-OgQ" customClass="BandView" customModule="Metal_Band_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oTU-wD-ra5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cl0-bT-Oo6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="REC-8U-Cnh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuF-ZI-ydn">
+                                <rect key="frame" x="16" y="97" width="343" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="bd1-Nk-zq0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K9h-EU-Ncl">
+                                <rect key="frame" x="25" y="157" width="325" height="247"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs3-R5-iZo">
+                                <rect key="frame" x="133" y="439" width="109" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="QrH-2I-BmY"/>
+                                    <constraint firstAttribute="height" constant="109" id="yvT-Zs-htI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                <state key="normal" backgroundImage="icons/info.png">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moreInfo:" destination="Sox-6f-OgQ" eventType="touchUpInside" id="cjN-WF-1JO"/>
+                                    <segue destination="apf-SO-k8J" kind="show" identifier="firstSegue" id="JAb-zm-aSF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press i For More Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrt-up-0Yv">
+                                <rect key="frame" x="16" y="568" width="343" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="B3a-En-ZJt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wuF-ZI-ydn" firstAttribute="top" secondItem="oTU-wD-ra5" secondAttribute="bottom" constant="33" id="3jg-0v-dOY"/>
+                            <constraint firstItem="K9h-EU-Ncl" firstAttribute="top" secondItem="wuF-ZI-ydn" secondAttribute="bottom" constant="21" id="4VC-Ga-BXz"/>
+                            <constraint firstItem="wuF-ZI-ydn" firstAttribute="centerX" secondItem="K9h-EU-Ncl" secondAttribute="centerX" id="Bho-ga-jGp"/>
+                            <constraint firstItem="yrt-up-0Yv" firstAttribute="top" secondItem="cs3-R5-iZo" secondAttribute="bottom" constant="20" id="Dcs-oM-6Kw"/>
+                            <constraint firstItem="wuF-ZI-ydn" firstAttribute="leading" secondItem="yrt-up-0Yv" secondAttribute="leading" id="Fwc-mt-eU3"/>
+                            <constraint firstItem="K9h-EU-Ncl" firstAttribute="leading" secondItem="REC-8U-Cnh" secondAttribute="leadingMargin" constant="9" id="SYB-xe-aTE"/>
+                            <constraint firstItem="cs3-R5-iZo" firstAttribute="centerX" secondItem="yrt-up-0Yv" secondAttribute="centerX" id="bPy-Wk-SOJ"/>
+                            <constraint firstItem="wuF-ZI-ydn" firstAttribute="leading" secondItem="REC-8U-Cnh" secondAttribute="leadingMargin" id="idK-wW-DgC"/>
+                            <constraint firstItem="wuF-ZI-ydn" firstAttribute="trailing" secondItem="yrt-up-0Yv" secondAttribute="trailing" id="m4S-Gi-oMz"/>
+                            <constraint firstItem="wuF-ZI-ydn" firstAttribute="trailing" secondItem="REC-8U-Cnh" secondAttribute="trailingMargin" id="o23-2B-ZCk"/>
+                            <constraint firstItem="cs3-R5-iZo" firstAttribute="top" secondItem="K9h-EU-Ncl" secondAttribute="bottom" constant="35" id="qMz-Tj-sBn"/>
+                            <constraint firstItem="Cl0-bT-Oo6" firstAttribute="top" secondItem="yrt-up-0Yv" secondAttribute="bottom" constant="34" id="uQX-Fa-F8A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bandLabel" destination="wuF-ZI-ydn" id="3Xa-xQ-Tem"/>
+                        <outlet property="bandView" destination="K9h-EU-Ncl" id="uHA-eY-B6C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T30-e8-Cz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="-83.208395802098963"/>
+        </scene>
+        <!--Band Details View-->
+        <scene sceneID="c7e-F7-Vrw">
+            <objects>
+                <viewController id="apf-SO-k8J" customClass="BandDetailsView" customModule="Metal_Band_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NhT-tV-sAR"/>
+                        <viewControllerLayoutGuide type="bottom" id="tFI-ba-5s1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wrp-fu-Y14">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7Z-iH-v00">
+                                <rect key="frame" x="231" y="504" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="MuR-HH-m77"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                <state key="normal" backgroundImage="icons/music.png">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moreInfo:" destination="Sox-6f-OgQ" eventType="touchUpInside" id="wMf-Ql-3NN"/>
+                                    <action selector="soundbiteAction:" destination="apf-SO-k8J" eventType="touchUpInside" id="c9z-F4-BqT"/>
+                                    <segue destination="hFb-sW-ZNu" kind="show" identifier="audioSegue" id="8Bf-iv-bge"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1a-rh-Yaj">
+                                <rect key="frame" x="44" y="525" width="69" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="CD1-0G-IJw"/>
+                                    <constraint firstAttribute="height" constant="69" id="cKg-ak-Jvh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                <state key="normal" backgroundImage="icons/web.png">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moreInfo:" destination="Sox-6f-OgQ" eventType="touchUpInside" id="fha-4X-m6P"/>
+                                    <action selector="websiteAction:" destination="apf-SO-k8J" eventType="touchUpInside" id="7ON-X2-df2"/>
+                                    <segue destination="XHd-KR-Moq" kind="show" identifier="webSegue" id="KiC-TU-Y4y"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pzf-W1-Mqo">
+                                <rect key="frame" x="63" y="112" width="249" height="177"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqG-Cp-Laa">
+                                <rect key="frame" x="16" y="344" width="343" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="3cO-k0-PQe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWf-2n-bmp">
+                                <rect key="frame" x="16" y="384" width="343" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="TFh-zQ-akI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iN1-WW-HvK">
+                                <rect key="frame" x="16" y="424" width="343" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="xbD-bw-wmK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3S-0S-iCs">
+                                <rect key="frame" x="16" y="464" width="343" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="iFu-hs-tCJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WWf-2n-bmp" firstAttribute="trailing" secondItem="iN1-WW-HvK" secondAttribute="trailing" id="1RE-hp-CoT"/>
+                            <constraint firstItem="pzf-W1-Mqo" firstAttribute="leading" secondItem="Wrp-fu-Y14" secondAttribute="leadingMargin" constant="47" id="1hW-rX-Ii7"/>
+                            <constraint firstItem="iN1-WW-HvK" firstAttribute="leading" secondItem="K3S-0S-iCs" secondAttribute="leading" id="8ZZ-VJ-fCT"/>
+                            <constraint firstItem="WWf-2n-bmp" firstAttribute="top" secondItem="iqG-Cp-Laa" secondAttribute="bottom" constant="8" symbolic="YES" id="DtY-gF-W2T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b7Z-iH-v00" secondAttribute="trailing" constant="18" id="Gum-BW-5JK"/>
+                            <constraint firstItem="K3S-0S-iCs" firstAttribute="top" secondItem="iN1-WW-HvK" secondAttribute="bottom" constant="8" symbolic="YES" id="L3r-Ty-n0S"/>
+                            <constraint firstItem="b7Z-iH-v00" firstAttribute="top" secondItem="K3S-0S-iCs" secondAttribute="bottom" constant="8" symbolic="YES" id="R8U-KX-vqt"/>
+                            <constraint firstItem="iqG-Cp-Laa" firstAttribute="leading" secondItem="Wrp-fu-Y14" secondAttribute="leadingMargin" id="TrD-81-wCo"/>
+                            <constraint firstItem="q1a-rh-Yaj" firstAttribute="leading" secondItem="Wrp-fu-Y14" secondAttribute="leadingMargin" constant="28" id="U60-kS-Oot"/>
+                            <constraint firstItem="WWf-2n-bmp" firstAttribute="leading" secondItem="iN1-WW-HvK" secondAttribute="leading" id="Z8h-aF-p9x"/>
+                            <constraint firstItem="tFI-ba-5s1" firstAttribute="top" secondItem="b7Z-iH-v00" secondAttribute="bottom" constant="53" id="ZYf-BI-fuO"/>
+                            <constraint firstItem="iN1-WW-HvK" firstAttribute="top" secondItem="WWf-2n-bmp" secondAttribute="bottom" constant="8" symbolic="YES" id="dNq-HU-3xk"/>
+                            <constraint firstItem="q1a-rh-Yaj" firstAttribute="centerY" secondItem="b7Z-iH-v00" secondAttribute="centerY" id="gGf-dd-1vq"/>
+                            <constraint firstItem="iqG-Cp-Laa" firstAttribute="trailing" secondItem="WWf-2n-bmp" secondAttribute="trailing" id="gtg-E5-nx3"/>
+                            <constraint firstItem="iqG-Cp-Laa" firstAttribute="top" secondItem="pzf-W1-Mqo" secondAttribute="bottom" constant="55" id="iD4-TQ-fNt"/>
+                            <constraint firstItem="iN1-WW-HvK" firstAttribute="trailing" secondItem="K3S-0S-iCs" secondAttribute="trailing" id="jQt-aR-S7J"/>
+                            <constraint firstItem="iqG-Cp-Laa" firstAttribute="leading" secondItem="WWf-2n-bmp" secondAttribute="leading" id="mGC-lM-hp2"/>
+                            <constraint firstItem="pzf-W1-Mqo" firstAttribute="centerX" secondItem="iqG-Cp-Laa" secondAttribute="centerX" id="mhN-F9-1Nu"/>
+                            <constraint firstItem="iqG-Cp-Laa" firstAttribute="trailing" secondItem="Wrp-fu-Y14" secondAttribute="trailingMargin" id="mji-S1-2Xk"/>
+                            <constraint firstItem="pzf-W1-Mqo" firstAttribute="top" secondItem="NhT-tV-sAR" secondAttribute="bottom" constant="48" id="qaL-QF-UID"/>
+                            <constraint firstItem="q1a-rh-Yaj" firstAttribute="top" secondItem="K3S-0S-iCs" secondAttribute="bottom" constant="29" id="v3V-EH-ObD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bandImage" destination="pzf-W1-Mqo" id="6jB-YJ-sOI"/>
+                        <outlet property="bandNameLabel" destination="iqG-Cp-Laa" id="dac-cx-0LW"/>
+                        <outlet property="countryLabel" destination="WWf-2n-bmp" id="38Z-15-laf"/>
+                        <outlet property="formedLabel" destination="K3S-0S-iCs" id="1OH-lO-yzy"/>
+                        <outlet property="genreLabel" destination="iN1-WW-HvK" id="Aqu-i5-86m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3X-hu-NOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856.79999999999995" y="-83.208395802098963"/>
+        </scene>
+        <!--Web View-->
+        <scene sceneID="avv-ur-rbT">
+            <objects>
+                <viewController id="XHd-KR-Moq" customClass="WebView" customModule="Metal_Band_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1lx-xA-APh"/>
+                        <viewControllerLayoutGuide type="bottom" id="hBQ-Ob-UUj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kc9-yJ-YYf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3S4-Kp-06O">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3S4-Kp-06O" firstAttribute="top" secondItem="Kc9-yJ-YYf" secondAttribute="top" id="Gsb-C3-qKN"/>
+                            <constraint firstAttribute="trailing" secondItem="3S4-Kp-06O" secondAttribute="trailing" id="bIX-2K-Rkk"/>
+                            <constraint firstItem="3S4-Kp-06O" firstAttribute="leading" secondItem="Kc9-yJ-YYf" secondAttribute="leading" id="eze-fQ-X0l"/>
+                            <constraint firstItem="3S4-Kp-06O" firstAttribute="bottom" secondItem="hBQ-Ob-UUj" secondAttribute="top" id="xTy-OJ-flS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bandWebView" destination="3S4-Kp-06O" id="r57-hy-GdX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F65-E4-IVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="-304"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="4Vh-2u-QAP">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="hFb-sW-ZNu" customClass="AudioView" customModule="Metal_Band_App" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WO0-p6-p37" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="335"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons/info.png" width="16" height="16"/>
+        <image name="icons/music.png" width="16" height="16"/>
+        <image name="icons/web.png" width="16" height="16"/>
+    </resources>
+</document>

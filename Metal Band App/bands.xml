@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bands>
+	<band>
+		<name>Iron Maiden</name>
+		<country>England</country>
+		<genre>Heavy Metal</genre>
+		<formed>1975</formed>
+        <image>iron-maiden.jpg</image>
+        <icon>iron-maiden-icon.jpg</icon>
+        <url>https://en.wikipedia.org/wiki/Iron_Maiden</url>
+     </band>
+    <band>
+        <name>In Flames</name>
+        <country>Sweden</country>
+        <genre>Melodic Death Metal</genre>
+        <formed>1990</formed>
+        <image>in-flames.jpg</image>
+        <icon>in-flames-icon.jpg</icon>
+        <url>http://www.inflames.com</url>
+    </band>
+    <band>
+        <name>Dimmu Borgir</name>
+        <country>Norway</country>
+        <genre>Symphonic Black Metal</genre>
+        <formed>1993</formed>
+        <image>dimmu-borgir.jpg</image>
+        <icon>dimmu-borgir-icon.jpg</icon>
+        <url>http://www.nuclearblast.de/en/label/music/band/about/70921.dimmu-borgir.html</url>
+    </band>
+    <band>
+        <name>Alestorm</name>
+        <country>Scotland</country>
+        <genre>Pirate Metal</genre>
+        <formed>2004</formed>
+        <image>alestorm.jpg</image>
+        <icon>alestorm-icon.jpg</icon>
+        <url>http://www.alestorm.net</url>
+    </band>
+    <band>
+        <name>DevilDriver</name>
+        <country>United States</country>
+        <genre>Groove Metal</genre>
+        <formed>2002</formed>
+        <image>devildriver.jpg</image>
+        <icon>devildriver-icon.jpg</icon>
+        <url>http://www.devildriver.com</url>
+    </band>
+    <band>
+		<name>Children of Bodom</name>
+		<country>Finland</country>
+		<genre>Melodic Death Metal</genre>
+		<formed>1993</formed>
+        <image>children-of-bodom.jpg</image>
+        <icon>children-of-bodom-icon.jpg</icon>
+        <url>http://www.cobhc.com/site/</url>
+     </band>
+    <band>
+        <name>Within Temptation</name>
+        <country>Netherlands</country>
+        <genre>Symphonic Metal</genre>
+        <formed>1995</formed>
+        <image>within-temptation.jpg</image>
+        <icon>within-temptation-icon.jpg</icon>
+        <url>https://www.within-temptation.com</url>
+    </band>
+    <band>
+        <name>Sepultura</name>
+        <country>Brazil</country>
+        <genre>Thrash Metal</genre>
+        <formed>1984</formed>
+        <image>sepultura.jpg</image>
+        <icon>sepultura-icon.jpg</icon>
+        <url>http://www.sepultura.com.br</url>
+    </band>
+    <band>
+        <name>Skindred</name>
+        <country>Wales</country>
+        <genre>Reggae Metal</genre>
+        <formed>1998</formed>
+        <image>skindred.jpg</image>
+        <icon>skindred-icon.jpg</icon>
+        <url>http://www.skindred.net</url>
+    </band>
+    <band>
+        <name>Gojira</name>
+        <country>France</country>
+        <genre>Death Metal</genre>
+        <formed>1996</formed>
+        <image>gojira.jpg</image>
+        <icon>gojira-icon.jpg</icon>
+        <url>http://www.gojira-music.com</url>
+    </band>
+    <band>
+		<name>Mael Mordha</name>
+		<country>Ireland</country>
+		<genre>Doom Metal</genre>
+		<formed>1998</formed>
+        <image>mael-mordha.jpg</image>
+        <icon>mael-mordha-icon.jpg</icon>
+        <url>https://www.facebook.com/maelmordhaofficial/</url>
+     </band>
+    <band>
+        <name>Lacuna Coil</name>
+        <country>Italy</country>
+        <genre>Gothic Metal</genre>
+        <formed>1994</formed>
+        <image>lacuna-coil.jpg</image>
+        <icon>lacuna-coil-icon.jpg</icon>
+        <url>http://www.lacunacoil.it</url>
+    </band>
+    <band>
+        <name>DIR EN GREY</name>
+        <country>Japan</country>
+        <genre>Avant-garde Metal</genre>
+        <formed>1997</formed>
+        <image>dir-en-grey.jpg</image>
+        <icon>dir-en-grey-icon.jpg</icon>
+        <url>http://direngrey.co.jp</url>
+    </band>
+    <band>
+        <name>Behemoth</name>
+        <country>Poland</country>
+        <genre>Blackened Death Metal</genre>
+        <formed>1991</formed>
+        <image>behemoth.jpg</image>
+        <icon>behemoth-icon.jpg</icon>
+        <url>http://behemoth.pl</url>
+    </band>
+    <band>
+        <name>Helloween</name>
+        <country>Germany</country>
+        <genre>Power Metal</genre>
+        <formed>1984</formed>
+        <image>helloween.jpg</image>
+        <icon>helloween-icon.jpg</icon>
+        <url>http://pumpkins-united.helloween.org/en/pumpkins-united.html</url>
+    </band>
+</bands>
+
+
+
+
